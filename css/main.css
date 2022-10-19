@@ -1,0 +1,76 @@
+html {
+    background: cadetblue;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 200;
+}
+
+body {
+    margin: 0;
+}
+
+.panel {
+    align-items: center;
+    text-align: center;
+    color: rgb(126, 20, 52);
+    background: burlywood;
+    transition:
+    flex-grow 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    font-size 0.7s cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-size 0.2s;
+    font-size: 20px;
+    background-position: center;
+    background-size: cover;
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.panels {
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+}
+
+.panel1 {
+    background-image: url('/img/p1.jpg')
+}
+.panel2 {
+    background-image: url('/img/p2.jpg');
+}
+
+.panel3 {
+    background-image: url('/img/p3.jpg');
+}
+.panel4 {
+    background-image: url('/img/p4.jpg');
+}
+
+.panel5 {
+    background-image: url('/img/p5.jpg');
+}
+
+
+.panel > * {
+    padding: 1;
+    margin: 0;
+    width: 100%;
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.panel > *:first-child { transform: translateY(-100%);}
+.panel.open-active > *:first-child { transform: translateY(0%);}
+.panel > *:last-child { transform: translateY(100%);}
+ .panel.open-active > *:last-child { transform: translateY(0);}
+
+.panel.open{
+    flex: 5;
+    font-size: 50px;
+}
+
